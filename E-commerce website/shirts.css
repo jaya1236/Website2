@@ -1,0 +1,331 @@
+/* Reset default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-left: 20px;
+  }
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 40px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .toggle-button span {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .menu.active {
+      display: flex;
+    }
+  
+    .menu li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .toggle-button {
+      display: flex;
+    }
+  
+    .toggle-button span {
+      background-color: #000;
+      width: 25px;
+      height: 3px;
+      margin-bottom: 5px;
+      transition: transform 0.3s ease;
+    }
+  
+    .toggle-button.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .toggle-button.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .toggle-button.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+  
+     
+
+  /* Hero section styles */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace 'hero-background.jpg' with your image */
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+  /* Product section styles */
+/* Product section styles */
+.products {
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .column {
+    flex-basis: 23%; /* Display 4 columns per row */
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .product {
+    border: none;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .product h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+  
+  .product p {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .column {
+      flex-basis: 40%; /* Display 2 columns per row on smaller screens */
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .column {
+      flex-basis: 100%; /* Display 1 column per row on even smaller screens */
+    }
+  }
+  
+  
+
+  /* Secondary banner section styles */
+/* Secondary banner section styles */
+.secondary-banner {
+    background-color: #84a3c3; /* Choose your background color */
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; /* Needed for absolute positioning of the tagline */
+  }
+  
+  .secondary-banner img {
+    width: 100%;
+    height: 300px; /* Set the height of the image */
+    object-fit: cover; /* Make the image cover the entire width while preserving aspect ratio */
+  }
+  
+  .tagline {
+    position: absolute;
+    bottom: 20px; /* Adjust the position of the tagline as needed */
+    left: 0;
+    right: 0;
+  }
+   h2 {
+    font-size: 3em;
+    color: black /* Choose your text color */
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 0 20px;
+    }
+  }
+  
+
+
+
+  /* Footer styles */
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .footer-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .footer-links ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-copyright p {
+    text-align: center;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-links ul {
+      margin-top: 20px;
+    }
+  
+    .footer-links ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .footer-links ul li:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
